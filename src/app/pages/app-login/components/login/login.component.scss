@@ -1,2 +1,33 @@
+@import "variables.scss";
+@import "functions.scss";
+
 :host {
+  background-color: map-get($colors, "bg-color-2");
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+
+  .base-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+
+    img {
+      width: 40%;
+    }
+  }
+}
+
+.btn--open {
+  background-color: map-get($colors, "primary-color");
+  min-width: Rem(200px);
+  padding: Rem(10px);
+  border-radius: 500px;
+  border: 0;
+  color: map-get($colors, "secondary-color");
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: map-get($font-weights, "bold");
 }

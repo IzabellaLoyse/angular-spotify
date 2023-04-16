@@ -7,11 +7,20 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full',
   },
+
   {
     path: 'login',
     loadChildren: () =>
       import('./pages/app-login/app-login.module').then(
         (m) => m.AppLoginModule
+      ),
+  },
+
+  {
+    path: 'player',
+    loadChildren: () =>
+      import('./pages/app-player/app-player.module').then(
+        (m) => m.AppPlayerModule
       ),
   },
 ];
